@@ -1,0 +1,62 @@
+.my-button {
+  cursor: pointer;
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-family: "Saira Semi Condensed", sans-serif;
+  display: block;
+  text-decoration: none;
+
+  &.main {
+    background-color: var(--main);
+    border: none;
+    span {
+      color: white;
+      font-weight: 600;
+    }
+  }
+  &.white {
+    background-color: white;
+    border: none;
+    span {
+      color: var(--main);
+      font-weight: 600;
+    }
+  }
+  &.gray {
+    background-color: var(--grey);
+    border: none;
+    span {
+      color: var(--text);
+      font-weight: 300;
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: 1px solid var(--main);
+    span {
+      color: var(--main);
+    }
+  }
+
+  &.go {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    span,
+    i,
+    svg {
+      color: var(--main);
+      font-weight: 600;
+      line-height: 3px;
+    }
+  }
+
+  span {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}

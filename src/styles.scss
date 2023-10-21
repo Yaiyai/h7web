@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;600;800&display=swap");
+:root {
+  --main: #242e7e;
+  --secondary: #e2e216;
+  --third: #348ca4;
+  --text: #414141;
+  --light-grey: #c1c1c1e6;
+  --grey: #c1c1c1;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  position: relative;
+  font-family: "Saira Semi Condensed", sans-serif;
+  color: var(--text);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  z-index: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  //   &::before {
+  //     content: "";
+  //     position: fixed;
+  //     width: 100%;
+  //     height: 100%;
+  //     background-image: url("https://res.cloudinary.com/sanroque/image/upload/v1687890637/bkg1.png");
+  //     background-position: top center;
+  //     background-size: 100%;
+  //     background-repeat: no-repeat;
+  //     background-attachment: fixed;
+  //     opacity: 0.5;
+  //     z-index: -1;
+  //     @media (max-width: 991px) {
+  //       background-size: cover;
+  //     }
+  //   }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+main {
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+}
