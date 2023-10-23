@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AppService } from './communication/services/app/app.service';
 import { ApiCompanyService } from './communication/api-company.service';
 import { Meta } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,11 @@ export class AppComponent {
     public appService: AppService,
     private apiCompanyService: ApiCompanyService,
     private meta: Meta,
+    public translate: TranslateService,
   ) {
+    translate.addLangs(['es', 'en']);
+    translate.setDefaultLang('es');
+    translate.use('es');
     // this.meta.addTags([
     //   { name: 'description', content: 'Restaurante de comida tradicional y caza en Brañosera, Palencia.' },
     //   { name: 'author', content: 'https://mfi.es/' },
