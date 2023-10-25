@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PipesModule } from '../pipes/pipes.module';
 import { ContainerModule } from '../_ui/container/container.module';
+import { HeaderModule } from './header/header.module';
 @NgModule({
     imports: [
     ],
@@ -8,6 +9,7 @@ import { ContainerModule } from '../_ui/container/container.module';
     exports: [
         PipesModule,
         ContainerModule,
+        HeaderModule,
     ]
 })
 export class SharedModule { }

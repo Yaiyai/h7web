@@ -29,8 +29,8 @@ body {
   }
 }
 main {
-  height: 100vh;
-  margin-top: 60px;
+  max-width: 1700px;
+  margin: 60px auto 0;
   &::-webkit-scrollbar {
     display: none;
   }
