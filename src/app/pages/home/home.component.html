@@ -1,4 +1,9 @@
-<app-header></app-header>
-<app-container>
-    <p>home works!</p>
-</app-container>
+<app-header [bkg]="bkg" [needsBlue]="true" [padding]="200">
+    <figure>
+        <img [src]="logo" alt="H7metrology Logo BN">
+    </figure>
+    <h1>{{title}}</h1>
+    <figure class="floating-image">
+        <img [src]="floatingImage" alt="H7metrology">
+    </figure>
+</app-header>

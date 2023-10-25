@@ -58,10 +58,6 @@ p {
 a {
   display: block;
 }
-svg {
-  width: 10px;
-  height: 10px;
-}
 
 .container {
   max-width: 1400px;
@@ -88,4 +84,11 @@ svg {
 button {
   background: transparent;
   border: none;
+}
+
+h1 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
 }

@@ -1,3 +1,12 @@
-<header>
-    <p>holi</p>
+<header [ngClass]="{'blue': needsBlue}" [style]="'--pad: ' + padding +'px' ">
+    <div class="bkg" [ngStyle]="{'background-image': 'url(' + bkg + ')'}"></div>
+    <div class="container" [ngClass]="{'centered': isCentered}">
+        <ng-content></ng-content>
+    </div>
+    <!-- <svg width="600" height="400">
+        <mask id="svgmask1">
+            <polygon fill="#ffffff" points="200 0, 400 400, 0 400"></polygon>
+        </mask>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" mask="url(#svgmask1)"></image>
+    </svg> -->
 </header>
