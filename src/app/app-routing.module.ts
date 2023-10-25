@@ -3,6 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+  { path: 'quienes-somos', loadChildren: () => import('./pages/nosotros/nosotros.module').then(m => m.NosotrosModule) },
+  { path: 'control-dimensional', loadChildren: () => import('./pages/control/control.module').then(m => m.ControlModule) },
+  { path: 'end', loadChildren: () => import('./pages/end/end.module').then(m => m.EndModule) },
+  { path: 'ingenieria-inversa', loadChildren: () => import('./pages/inversa/inversa.module').then(m => m.InversaModule) },
+  { path: 'impresion-3d', loadChildren: () => import('./pages/impresion/impresion.module').then(m => m.ImpresionModule) },
+  { path: 'subvenciones', loadChildren: () => import('./pages/subvenciones/subvenciones.module').then(m => m.SubvencionesModule) },
 ];
 
 @NgModule({

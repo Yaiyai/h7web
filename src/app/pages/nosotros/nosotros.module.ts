@@ -21,4 +21,4 @@ import { NosotrosComponent } from './nosotros.component';
         NO_ERRORS_SCHEMA
     ]
 })
-export class HomeModule { }
+export class NosotrosModule { }

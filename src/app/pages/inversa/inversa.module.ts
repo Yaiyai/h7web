@@ -21,4 +21,4 @@ import { InversaComponent } from './inversa.component';
         NO_ERRORS_SCHEMA
     ]
 })
-export class HomeModule { }
+export class InversaModule { }

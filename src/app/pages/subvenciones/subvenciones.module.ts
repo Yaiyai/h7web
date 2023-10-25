@@ -21,4 +21,4 @@ import { SubvencionesComponent } from './subvenciones.component';
         NO_ERRORS_SCHEMA
     ]
 })
-export class HomeModule { }
+export class SubvencionesModule { }
