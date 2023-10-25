@@ -6,19 +6,21 @@ type MessageCallback = (payload: any) => void;
 @Injectable({
   providedIn: 'root'
 })
-export class AppService {
+export class CompanyService {
   private handler = new Subject<any>();
-  public _isHome: boolean = false;
-  public isContact: boolean = false;
+  public _company: any;
 
-  public get isHome() {
-    return this._isHome;
+  public get companyLogo() {
+    return this.company?.mainLogo;
+  }
+  public get company() {
+    return this._company;
   }
 
   constructor() { }
 
-  setIsHome(isHome: boolean) {
-    this._isHome = isHome;
+  setCompany(company: any) {
+    this._company = company;
   }
 
   broadcast(type: string, payload: any = null) {

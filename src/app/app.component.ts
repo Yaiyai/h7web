@@ -3,6 +3,7 @@ import { AppService } from './communication/services/app/app.service';
 import { ApiCompanyService } from './communication/api-company.service';
 import { Meta } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
+import { CompanyService } from './communication/services/company/company.service';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent {
     private apiCompanyService: ApiCompanyService,
     private meta: Meta,
     public translate: TranslateService,
+    private companyService: CompanyService,
   ) {
     translate.addLangs(['es', 'en']);
     translate.setDefaultLang('es');
@@ -41,8 +43,7 @@ export class AppComponent {
     this.apiCompanyService.getCompany().subscribe({
       next: data => {
         this.company = data.company[0];
-        this.appService.setCompany(this.company);
-        this.appService.broadcast('getCompany', this.company);
+        this.companyService.setCompany(this.company);
       },
       error: err => console.error('Error getting company: ', err)
     });
