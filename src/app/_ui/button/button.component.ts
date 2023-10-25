@@ -10,6 +10,7 @@ export class ButtonComponent {
   @Input() class: 'main' | 'outline' | 'go' | 'link' | 'gray' | 'white' = 'main';
   @Input() isLink: boolean = false;
   @Input() link: string = '';
+  @Input() icon: string = '';
 
   constructor() { }
 
