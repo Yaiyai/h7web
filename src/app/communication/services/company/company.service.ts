@@ -13,8 +13,17 @@ export class CompanyService {
   public get companyLogo() {
     return this.company?.mainLogo;
   }
+
+  public get companyLogoBN() {
+    return this.company?.secondaryLogo;
+  }
+
   public get company() {
     return this._company;
+  }
+
+  public get name() {
+    return this._company.name;
   }
 
   constructor() { }

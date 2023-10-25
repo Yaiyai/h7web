@@ -7,8 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() label: string = '';
-  @Input() class: 'main' | 'outline' | 'go' | 'link' | 'gray' | 'white' = 'main';
+  @Input() classBtn: 'main' | 'outline' | 'go' | 'link' | 'gray' | 'white' | 'nolink' = 'main';
   @Input() isLink: boolean = false;
+  @Input() isNegative: boolean = false;
   @Input() link: string = '';
   @Input() icon: string = '';
 

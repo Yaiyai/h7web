@@ -1,4 +1,30 @@
 <footer>
-    <app-button label="Contacto" class="outline" (click)="navigate('/contacto')"></app-button>
-    <a href="https://www.mfi.es/" target="_blank">Diseño y desarrollo: MFi, S.L.</a>
+    <div class="top">
+        <div class="container">
+            <figure (click)="goHome()">
+                <img [src]="companyService.companyLogoBN" alt="H7metrology Logo BN">
+            </figure>
+            <div class="links">
+                <app-button [isNegative]="true" [label]="'Quienes somos'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [isNegative]="true" [label]="'Soluciones'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [isNegative]="true" [label]="'Control Dimensional'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [isNegative]="true" [label]="'END'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [isNegative]="true" [label]="'Ingeniería inversa'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [isNegative]="true" [label]="'Impresión 3D'" classBtn="link" (click)="navigate('/')"></app-button>
+            </div>
+            <app-button class="last" [isNegative]="true" [label]="'Subvenciones'" classBtn="link" (click)="navigate('/')"></app-button>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="container">
+            <app-button [label]="'@' + year + ' ' + companyService.name  + ' - Diseño y desarrollo: MFi, S.L.'" classBtn="nolink" [isLink]="true" [link]="'https://www.mfi.es/'"></app-button>
+
+            <div class="links">
+                <app-button [label]="'Términos y condiciones'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [label]="'Condiciones de uso'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [label]="'Privacidad'" classBtn="link" (click)="navigate('/')"></app-button>
+            </div>
+        </div>
+    </div>
+
 </footer>
