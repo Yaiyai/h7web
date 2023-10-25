@@ -23,7 +23,7 @@ export class CompanyService {
   }
 
   public get name() {
-    return this._company.name;
+    return this._company?.name;
   }
 
   constructor() { }
