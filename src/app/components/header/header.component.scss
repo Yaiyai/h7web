@@ -15,6 +15,15 @@ header {
     }
   }
 
+  &.triangle {
+    &::after {
+      clip-path: polygon(0 0, 100% 0, 100% 77%, 0% 100%);
+    }
+    .clip {
+      clip-path: polygon(0 0, 100% 0, 100% 77%, 0% 100%);
+    }
+  }
+
   .container {
     position: relative;
     z-index: 1;
@@ -43,20 +52,14 @@ header {
     }
   }
 
-  .bkg {
+  .clip {
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-size: 120%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 0;
-  }
-
-  svg {
-    position: relative;
-    z-index: 3;
+    object-fit: cover;
+    object-position: center;
   }
 }

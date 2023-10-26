@@ -9,6 +9,7 @@ import { CompanyService } from 'src/app/communication/services/company/company.s
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
+  @Input() isTriangle: boolean = false;
   @Input() isCentered: boolean = false;
   @Input() needsBlue: boolean = false;
   @Input() bkg: boolean = false;
