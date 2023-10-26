@@ -1,7 +1,6 @@
 <header [ngClass]="{'blue': needsBlue, 'triangle':isTriangle}" [style]="'--pad: ' + padding +'px' ">
-    <img class="clip" [src]="bkg" alt="">
+    <img *ngIf="bkg" class="clip" [src]="bkg" alt="">
     <div class="container" [ngClass]="{'centered': isCentered}">
         <ng-content></ng-content>
     </div>
-
 </header>

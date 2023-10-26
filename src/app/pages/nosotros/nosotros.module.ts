@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
-import { ButtonModule } from 'src/app/_ui/button/button.module';
 import { NosotrosRoutingModule } from './nosotros-routing.module';
 import { NosotrosComponent } from './nosotros.component';
+import { SharedModule } from 'src/app/components/shared.module';
 
 @NgModule({
     imports: [
         CommonModule,
-        ButtonModule,
+        SharedModule,
     ],
     declarations: [
         NosotrosComponent

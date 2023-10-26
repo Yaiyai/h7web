@@ -31,6 +31,7 @@ body {
 main {
   max-width: 1700px;
   margin: 60px auto 0;
+  min-height: calc(100vh - 61px - 163px);
   &::-webkit-scrollbar {
     display: none;
   }
@@ -87,8 +88,14 @@ button {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 900;
-  line-height: normal;
+  line-height: 52px;
+}
+h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
 }
