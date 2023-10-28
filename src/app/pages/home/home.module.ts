@@ -3,11 +3,13 @@ import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule } from '@angular/cor
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/components/shared.module';
+import { ListItemModule } from 'src/app/_ui/list-item/list-item.module';
 
 @NgModule({
     imports: [
         CommonModule,
         SharedModule,
+        ListItemModule,
     ],
     declarations: [
         HomeComponent

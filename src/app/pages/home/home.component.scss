@@ -23,3 +23,39 @@ app-header {
     height: 482px;
   }
 }
+
+.solutions-section {
+  display: block;
+  position: relative;
+  padding: 72px 0;
+  &::after {
+    content: "";
+    background: url("/assets/images/concrete.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .container {
+    z-index: 1;
+    position: relative;
+    h3 {
+      color: white;
+      margin-bottom: 30px;
+    }
+    .solutions {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      app-list-item {
+        display: block;
+        flex: 0 0 49%;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
