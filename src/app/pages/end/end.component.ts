@@ -7,6 +7,8 @@ import { ApiSectionsService } from 'src/app/communication/api-sections.service';
   styleUrls: ['./end.component.scss']
 })
 export class EndComponent implements OnInit {
+  public result: { image: any; text: any; } = { image: '', text: '' };
+
   public end: any;
   public get bkg() {
     return this.end?.uniqueImage;
@@ -33,6 +35,10 @@ export class EndComponent implements OnInit {
       next: section => {
         this.end = section.section;
         console.log(this.end);
+        this.result = {
+          image: this.end.text.split('))))</p>')[0].split('((((IMAGE:')[1],
+          text: this.end.text.split('))))</p>')[1],
+        };
       }
     });
   }

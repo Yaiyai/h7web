@@ -8,6 +8,7 @@ import { ApiSectionsService } from 'src/app/communication/api-sections.service';
 })
 export class ImpresionComponent implements OnInit {
   public impresion: any;
+  public result: { image: any; text: any; } = { image: '', text: '' };
   public get bkg() {
     return this.impresion?.uniqueImage;
   }
@@ -33,6 +34,10 @@ export class ImpresionComponent implements OnInit {
       next: section => {
         this.impresion = section.section;
         console.log(this.impresion);
+        this.result = {
+          image: this.impresion.text.split('))))</p>')[0].split('((((IMAGE:')[1],
+          text: this.impresion.text.split('))))</p>')[1],
+        };
       }
     });
   }

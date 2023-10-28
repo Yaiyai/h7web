@@ -6,6 +6,7 @@ import { ApiSectionsService } from 'src/app/communication/api-sections.service';
   styleUrls: ['./inversa.component.scss']
 })
 export class InversaComponent implements OnInit {
+  public result: { image: any; text: any; } = { image: '', text: '' };
   public inversa: any;
   public get bkg() {
     return this.inversa?.uniqueImage;
@@ -32,6 +33,10 @@ export class InversaComponent implements OnInit {
       next: section => {
         this.inversa = section.section;
         console.log(this.inversa);
+        this.result = {
+          image: this.inversa.text.split('))))</p>')[0].split('((((IMAGE:')[1],
+          text: this.inversa.text.split('))))</p>')[1],
+        };
       }
     });
   }
