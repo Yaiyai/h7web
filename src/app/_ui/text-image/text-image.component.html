@@ -6,8 +6,11 @@
                 <img [src]="image" alt="H7Metrology">
             </figure>
         </div>
-        <div *ngIf="text" class="right">
-            <div [innerHTML]=" text | safe:'html' "></div>
+        <div class="right">
+            <div *ngIf="text && !isCustom" [innerHTML]=" text | safe:'html' "></div>
+            <ng-container *ngIf="isCustom">
+                <ng-content></ng-content>
+            </ng-container>
         </div>
     </article>
 </app-container>
