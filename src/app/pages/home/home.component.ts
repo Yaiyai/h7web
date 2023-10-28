@@ -7,7 +7,7 @@ import { CompanyService } from 'src/app/communication/services/company/company.s
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  public features: string[] = [];
   public home: any = null;
 
   public get floatingImage() {
@@ -39,7 +39,8 @@ export class HomeComponent implements OnInit {
     this.apiSectionsService.getSection('6533fce44f5e07001aa5bcaf').subscribe({
       next: section => {
         this.home = section.section;
-        console.log(this.home);
+        this.features = this.home.text.split('((()))');
+        console.log(this.features);
       }
     });
   }
