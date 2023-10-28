@@ -4,6 +4,8 @@
 </app-header>
 <ng-container *ngIf="!loading">
     <app-text-image [mainTitle]="'Carrera'" [leftImage]="false" [image]="result?.carrera?.image" [text]="result?.carrera?.text"></app-text-image>
+    <app-quote></app-quote>
     <app-text-image [mainTitle]="'Formación'" [leftImage]="true" [image]="result?.formacion?.image" [text]="result?.formacion?.text"></app-text-image>
+    <app-quote></app-quote>
     <app-text-image [mainTitle]="'Sostenibilidad'" [leftImage]="false" [image]="result?.sostenibilidad?.image" [text]="result?.sostenibilidad?.text"></app-text-image>
 </ng-container>

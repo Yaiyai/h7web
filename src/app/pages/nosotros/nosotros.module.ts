@@ -4,12 +4,14 @@ import { NosotrosRoutingModule } from './nosotros-routing.module';
 import { NosotrosComponent } from './nosotros.component';
 import { SharedModule } from 'src/app/components/shared.module';
 import { TextImageModule } from 'src/app/_ui/text-image/text-image.module';
+import { QuoteModule } from 'src/app/components/quote/quote.module';
 
 @NgModule({
     imports: [
         CommonModule,
         SharedModule,
         TextImageModule,
+        QuoteModule,
     ],
     declarations: [
         NosotrosComponent

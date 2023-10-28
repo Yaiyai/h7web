@@ -1,0 +1,33 @@
+.quote-section {
+  display: block;
+  position: relative;
+  padding: 72px 0;
+  &::after {
+    content: "";
+    background: url("/assets/images/quote_block.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .bkg {
+    object-fit: cover;
+    object-position: center;
+  }
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+  p.quote {
+    color: var(--main);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}

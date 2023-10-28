@@ -3,6 +3,7 @@ import { PipesModule } from '../pipes/pipes.module';
 import { ContainerModule } from '../_ui/container/container.module';
 import { HeaderModule } from './header/header.module';
 import { ButtonModule } from '../_ui/button/button.module';
+import { QuoteModule } from './quote/quote.module';
 @NgModule({
     imports: [
     ],
