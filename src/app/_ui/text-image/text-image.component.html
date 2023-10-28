@@ -1,0 +1,13 @@
+<app-container [isContainer]="true">
+    <h3>{{mainTitle}}</h3>
+    <article class="text-image" [ngClass]="{'image-left':leftImage, 'image-right':!leftImage}">
+        <div class="left">
+            <figure *ngIf="image">
+                <img [src]="image" alt="H7Metrology">
+            </figure>
+        </div>
+        <div *ngIf="text" class="right">
+            <div [innerHTML]=" text | safe:'html' "></div>
+        </div>
+    </article>
+</app-container>

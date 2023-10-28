@@ -17,7 +17,7 @@ body {
   color: var(--text);
   font-weight: 100;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 20px;
   z-index: 0;
   margin: 0;
   width: 100vw;
@@ -45,7 +45,10 @@ ul {
   margin: 0;
   padding: 0;
   li {
-    list-style-type: none;
+    margin-left: 24px;
+    &::marker {
+      color: var(--main);
+    }
     a {
       display: block;
       text-decoration: none;
@@ -98,4 +101,10 @@ h2 {
   font-style: normal;
   font-weight: 600;
   line-height: 30px;
+}
+h3 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
 }

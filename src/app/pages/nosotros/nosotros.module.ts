@@ -3,11 +3,13 @@ import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule } from '@angular/cor
 import { NosotrosRoutingModule } from './nosotros-routing.module';
 import { NosotrosComponent } from './nosotros.component';
 import { SharedModule } from 'src/app/components/shared.module';
+import { TextImageModule } from 'src/app/_ui/text-image/text-image.module';
 
 @NgModule({
     imports: [
         CommonModule,
         SharedModule,
+        TextImageModule,
     ],
     declarations: [
         NosotrosComponent
