@@ -2,5 +2,8 @@
     <figure>
         <img [src]="image" [alt]="mainTitle">
     </figure>
-    <div [innerHTML]=" text | safe:'html' "></div>
+    <div class="content" *ngIf="mainTitle || text">
+        <h3 *ngIf="mainTitle" class="main">{{mainTitle}}</h3>
+        <div *ngIf="text" [innerHTML]=" text | safe:'html' "></div>
+    </div>
 </article>

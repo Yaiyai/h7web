@@ -1,5 +1,5 @@
-<section *ngIf="variantes.length > 0" class="variantes">
+<section *ngIf="hasVariants" class="variantes">
     <div class="container">
-        <app-variante *ngFor="let variante of variantes" [mainTitle]="getVarianteTitle(variante)" [image]="getVarianteImage(variante)" [text]="getVarianteText"></app-variante>
+        <app-variante *ngFor="let variante of variantes" [mainTitle]="getVarianteTitle(variante)" [image]="getVarianteImage(variante)" [text]="getVarianteText(variante)"></app-variante>
     </div>
 </section>

@@ -9,6 +9,9 @@ import { ApiVariantsService } from 'src/app/communication/api-variants.service';
 export class VariantesComponent implements OnInit {
   @Input() category!: string;
   private _variantes: any;
+  public get hasVariants() {
+    return this._variantes?.length > 0;
+  }
 
   public get variantes() {
     return this._variantes;
@@ -26,7 +29,6 @@ export class VariantesComponent implements OnInit {
     this.apiVariantsService.getVariantByCategory(this.category).subscribe({
       next: res => {
         this._variantes = res.posts;
-        console.log(this.variantes);
       }
     });
   }
@@ -36,10 +38,10 @@ export class VariantesComponent implements OnInit {
   }
 
   getVarianteImage(variante: any) {
-    return variante.content.image[0].image;
+    return variante.content.image[0]?.image;
   }
 
   getVarianteText(variante: any) {
-    return variante.content.text[0].text;
+    return variante.content.text[0]?.text;
   }
 }
