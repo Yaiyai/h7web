@@ -24,8 +24,13 @@ export class NavbarComponent {
     this.navigate('/');
   }
 
-  navigate(url: string) {
-    this.router.navigate([url]);
+  navigate(url: string, anchor: string = '') {
+    if (anchor) {
+      this.router.navigate([url], { fragment: anchor });
+
+    } else {
+      this.router.navigate([url]);
+    }
   }
 
 }

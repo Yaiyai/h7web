@@ -8,7 +8,7 @@
     </figure>
 </app-header>
 
-<app-container [isContainer]="true">
+<app-container id="soluciones" [isContainer]="true">
     <h3 class="main">Quiénes somos</h3>
     <div class="features">
         <article *ngFor="let feat of features" class="box" [innerHTML]=" feat | safe:'html' "></article>
