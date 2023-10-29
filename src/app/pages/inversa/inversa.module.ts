@@ -5,6 +5,7 @@ import { InversaComponent } from './inversa.component';
 import { SharedModule } from 'src/app/components/shared.module';
 import { TextImageModule } from 'src/app/_ui/text-image/text-image.module';
 import { QuoteModule } from 'src/app/components/quote/quote.module';
+import { ContactModule } from 'src/app/components/contact/contact.module';
 
 @NgModule({
     imports: [
@@ -12,6 +13,7 @@ import { QuoteModule } from 'src/app/components/quote/quote.module';
         SharedModule,
         TextImageModule,
         QuoteModule,
+        ContactModule,
     ],
     declarations: [
         InversaComponent

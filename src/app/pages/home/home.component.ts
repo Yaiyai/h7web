@@ -40,7 +40,6 @@ export class HomeComponent implements OnInit {
       next: section => {
         this.home = section.section;
         this.features = this.home.text.split('((()))');
-        console.log(this.features);
       }
     });
   }

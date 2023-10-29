@@ -5,6 +5,7 @@ import { ImpresionComponent } from './impresion.component';
 import { SharedModule } from 'src/app/components/shared.module';
 import { QuoteModule } from 'src/app/components/quote/quote.module';
 import { TextImageModule } from 'src/app/_ui/text-image/text-image.module';
+import { ContactModule } from 'src/app/components/contact/contact.module';
 
 @NgModule({
     imports: [
@@ -12,6 +13,7 @@ import { TextImageModule } from 'src/app/_ui/text-image/text-image.module';
         SharedModule,
         QuoteModule,
         TextImageModule,
+        ContactModule,
     ],
     declarations: [
         ImpresionComponent

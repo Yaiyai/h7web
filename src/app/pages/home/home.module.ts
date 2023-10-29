@@ -4,12 +4,14 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/components/shared.module';
 import { ListItemModule } from 'src/app/_ui/list-item/list-item.module';
+import { ContactModule } from 'src/app/components/contact/contact.module';
 
 @NgModule({
     imports: [
         CommonModule,
         SharedModule,
         ListItemModule,
+        ContactModule,
     ],
     declarations: [
         HomeComponent
