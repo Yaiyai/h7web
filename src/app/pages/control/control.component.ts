@@ -20,6 +20,18 @@ export class ControlComponent implements OnInit {
     return this.control?.subtitle;
   }
 
+  public get image() {
+    return this.result.image;
+  }
+
+  public get text() {
+    return this.result.text;
+  }
+
+  public get features() {
+    return this.control?.features[0];
+  }
+
   constructor(
     public apiSectionsService: ApiSectionsService,
   ) { }
@@ -32,7 +44,6 @@ export class ControlComponent implements OnInit {
     this.apiSectionsService.getSection('6533fdac4f5e07001aa5bcb7').subscribe({
       next: section => {
         this.control = section.section;
-        console.log(this.control);
         this.result = {
           image: this.control.text.split('))))</p>')[0].split('((((IMAGE:')[1],
           text: this.control.text.split('))))</p>')[1],

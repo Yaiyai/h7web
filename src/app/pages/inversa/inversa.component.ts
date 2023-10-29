@@ -20,6 +20,19 @@ export class InversaComponent implements OnInit {
     return this.inversa?.subtitle;
   }
 
+
+  public get image() {
+    return this.result.image;
+  }
+
+  public get text() {
+    return this.result.text;
+  }
+
+  public get features() {
+    return this.inversa?.features[0];
+  }
+
   constructor(
     public apiSectionsService: ApiSectionsService,
   ) { }
@@ -32,7 +45,6 @@ export class InversaComponent implements OnInit {
     this.apiSectionsService.getSection('6533fe444f5e07001aa5bcbc').subscribe({
       next: section => {
         this.inversa = section.section;
-        console.log(this.inversa);
         this.result = {
           image: this.inversa.text.split('))))</p>')[0].split('((((IMAGE:')[1],
           text: this.inversa.text.split('))))</p>')[1],

@@ -34,6 +34,38 @@ export class NosotrosComponent implements OnInit {
     return this.nosotros?.subtitle;
   }
 
+  public get featuresOne() {
+    return this.nosotros?.features[0];
+  }
+
+  public get featuresSecond() {
+    return this.nosotros?.features[1];
+  }
+
+  public get sosImage() {
+    return this.result?.sostenibilidad?.image;
+  }
+
+  public get formacionImage() {
+    return this.result?.formacion?.image;
+  }
+
+  public get carreraImage() {
+    return this.result?.carrera?.image;
+  }
+
+  public get sosText() {
+    return this.result?.sostenibilidad?.text;
+  }
+
+  public get formacionText() {
+    return this.result?.formacion?.text;
+  }
+
+  public get carreraText() {
+    return this.result?.carrera?.text;
+  }
+
   constructor(
     public apiSectionsService: ApiSectionsService,
   ) { }

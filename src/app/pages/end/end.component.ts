@@ -22,6 +22,19 @@ export class EndComponent implements OnInit {
     return this.end?.subtitle;
   }
 
+
+  public get image() {
+    return this.result.image;
+  }
+
+  public get text() {
+    return this.result.text;
+  }
+
+  public get features() {
+    return this.end?.features[0];
+  }
+
   constructor(
     public apiSectionsService: ApiSectionsService,
   ) { }
@@ -34,7 +47,6 @@ export class EndComponent implements OnInit {
     this.apiSectionsService.getSection('6533fe024f5e07001aa5bcba').subscribe({
       next: section => {
         this.end = section.section;
-        console.log(this.end);
         this.result = {
           image: this.end.text.split('))))</p>')[0].split('((((IMAGE:')[1],
           text: this.end.text.split('))))</p>')[1],

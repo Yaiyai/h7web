@@ -21,6 +21,19 @@ export class ImpresionComponent implements OnInit {
     return this.impresion?.subtitle;
   }
 
+
+  public get image() {
+    return this.result.image;
+  }
+
+  public get text() {
+    return this.result.text;
+  }
+
+  public get features() {
+    return this.impresion?.features[0];
+  }
+
   constructor(
     public apiSectionsService: ApiSectionsService,
   ) { }
@@ -33,7 +46,6 @@ export class ImpresionComponent implements OnInit {
     this.apiSectionsService.getSection('6533fe834f5e07001aa5bcc1').subscribe({
       next: section => {
         this.impresion = section.section;
-        console.log(this.impresion);
         this.result = {
           image: this.impresion.text.split('))))</p>')[0].split('((((IMAGE:')[1],
           text: this.impresion.text.split('))))</p>')[1],
