@@ -6,7 +6,7 @@ import { SharedModule } from 'src/app/components/shared.module';
 import { TextImageModule } from 'src/app/_ui/text-image/text-image.module';
 import { QuoteModule } from 'src/app/components/quote/quote.module';
 import { ContactModule } from 'src/app/components/contact/contact.module';
-import { VarianteModule } from 'src/app/_ui/variante/variante.module';
+import { VariantesModule } from 'src/app/components/variantes/variantes.module';
 
 @NgModule({
     imports: [
@@ -15,7 +15,7 @@ import { VarianteModule } from 'src/app/_ui/variante/variante.module';
         TextImageModule,
         QuoteModule,
         ContactModule,
-        VarianteModule,
+        VariantesModule,
     ],
     declarations: [
         ControlComponent
