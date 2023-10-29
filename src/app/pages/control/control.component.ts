@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiSectionsService } from 'src/app/communication/api-sections.service';
+import { ApiVariantsService } from 'src/app/communication/api-variants.service';
 @Component({
   selector: 'app-control',
   templateUrl: './control.component.html',
@@ -8,6 +9,7 @@ import { ApiSectionsService } from 'src/app/communication/api-sections.service';
 export class ControlComponent implements OnInit {
   public control: any;
   public result: { image: any; text: any; } = { image: '', text: '' };
+  private _variantes: any;
   public get bkg() {
     return this.control?.uniqueImage;
   }
@@ -32,8 +34,13 @@ export class ControlComponent implements OnInit {
     return this.control?.features[0];
   }
 
+  public get variantes() {
+    return this._variantes;
+  }
+
   constructor(
     public apiSectionsService: ApiSectionsService,
+    private apiVariantsService: ApiVariantsService,
   ) { }
 
   ngOnInit(): void {
@@ -48,8 +55,30 @@ export class ControlComponent implements OnInit {
           image: this.control.text.split('))))</p>')[0].split('((((IMAGE:')[1],
           text: this.control.text.split('))))</p>')[1],
         };
+        this.getVariantes();
       }
     });
+  }
+
+  getVariantes() {
+    this.apiVariantsService.getVariantByCategory('Control dimensional').subscribe({
+      next: res => {
+        this._variantes = res.posts;
+        console.log(this.variantes);
+      }
+    });
+  }
+
+  getVarianteTitle(variante: any) {
+    return variante.title;
+  }
+
+  getVarianteImage(variante: any) {
+    return variante.content.image[0].image;
+  }
+
+  getVarianteText(variante: any) {
+    return variante.content.text[0].text;
   }
 
 }

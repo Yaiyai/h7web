@@ -4,4 +4,9 @@
 </app-header>
 <app-text-image [leftImage]="false" [image]="image" [text]="text"></app-text-image>
 <app-quote [quote]="features"></app-quote>
+<app-container>
+    <div class="variantes">
+        <app-variante *ngFor="let variante of variantes" [mainTitle]="getVarianteTitle(variante)" [image]="getVarianteImage(variante)" [text]="getVarianteText"></app-variante>
+    </div>
+</app-container>
 <app-contact></app-contact>
