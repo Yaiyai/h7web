@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,10 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class ApiCompanyService {
     url = 'https://cms-back-h7.up.railway.app/api';
+    private jsonHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+
     constructor(private http: HttpClient) { }
 
     getCompany(): Observable<any> {
         return this.http.get(`${this.url}/companies`);
+    }
+
+    sendMensage(message: any): Observable<any> {
+        return this.http.post(`${this.url}/messages`, message, { headers: this.jsonHeaders });
     }
 
 }

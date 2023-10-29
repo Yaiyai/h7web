@@ -1,0 +1,57 @@
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  app-button {
+    display: block;
+    margin-left: auto;
+  }
+  label {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  input,
+  textarea {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    &::placeholder {
+      display: block;
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--grey);
+      padding: 0px;
+    }
+    &:focus,
+    &:active {
+      border: var(--secondary) 1px solid;
+      border-radius: 0;
+    }
+    &[type="checkbox"] {
+      margin-right: 4px;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+  .input-label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    gap: 4px;
+    &.double {
+      width: 48%;
+    }
+  }
+  .input-textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
