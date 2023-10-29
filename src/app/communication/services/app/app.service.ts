@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 type MessageCallback = (payload: any) => void;
@@ -15,10 +16,24 @@ export class AppService {
     return this._isHome;
   }
 
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) { }
 
   setIsHome(isHome: boolean) {
     this._isHome = isHome;
+  }
+
+  public get isDesktop() {
+    if (isPlatformServer(this.platformId)) return true;
+    const isDesktop = window.matchMedia("(min-width: 992px)");
+    return isDesktop.matches;
+  }
+
+  public get isResponsive() {
+    if (isPlatformServer(this.platformId)) return false;
+    const is = window.matchMedia("(max-width:  991px)");
+    return is.matches;
   }
 
   broadcast(type: string, payload: any = null) {

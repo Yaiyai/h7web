@@ -13,7 +13,7 @@ export class NavbarComponent {
   private subscription: Subscription = new Subscription();
   public company: any;
 
-  constructor(private router: Router, public companyService: CompanyService) {
+  constructor(private router: Router, public companyService: CompanyService, public appService: AppService) {
   }
 
   ngOnDestroy() {

@@ -5,7 +5,7 @@
             <img [src]="companyService.companyLogo" alt="H7metrology Logo">
         </figure>
 
-        <div class="links">
+        <div *ngIf="appService.isDesktop" class="links">
             <app-button [label]="'Quienes somos'" classBtn="link" (click)="navigate('quienes-somos')"></app-button>
             <app-button [label]="'Soluciones'" classBtn="link" (click)="navigate('/')"></app-button>
             <app-button [label]="'Control Dimensional'" classBtn="link" (click)="navigate('control-dimensional')"></app-button>
