@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiSectionsService } from 'src/app/communication/api-sections.service';
 @Component({
   selector: 'app-nosotros',
@@ -68,7 +69,12 @@ export class NosotrosComponent implements OnInit {
 
   constructor(
     public apiSectionsService: ApiSectionsService,
-  ) { }
+    private translate: TranslateService,
+  ) {
+    this.translate.onLangChange.subscribe(res => {
+      this.getData();
+    });
+  }
 
   ngOnInit(): void {
     this.loading = true;
@@ -77,7 +83,7 @@ export class NosotrosComponent implements OnInit {
   }
 
   getData() {
-    this.apiSectionsService.getSection('6533fc664f5e07001aa5bcaa').subscribe({
+    this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '6533fc664f5e07001aa5bcaa' : '65492af0d90d872145f14fe8').subscribe({
       next: section => {
         this.nosotros = section.section;
         let carrera = this.nosotros.text.split('IMGCARRERA:')[1].split('<p>FORMACION</p>')[0];

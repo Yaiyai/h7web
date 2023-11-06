@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiSectionsService } from 'src/app/communication/api-sections.service';
 
 @Component({
@@ -36,14 +37,19 @@ export class ImpresionComponent implements OnInit {
 
   constructor(
     public apiSectionsService: ApiSectionsService,
-  ) { }
+    private translate: TranslateService,
+  ) {
+    this.translate.onLangChange.subscribe(res => {
+      this.getData();
+    });
+  }
 
   ngOnInit(): void {
     this.getData();
   }
 
   getData() {
-    this.apiSectionsService.getSection('6533fe834f5e07001aa5bcc1').subscribe({
+    this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '6533fe834f5e07001aa5bcc1' : '65492b04d90d872145f14fe9').subscribe({
       next: section => {
         this.impresion = section.section;
         this.result = {

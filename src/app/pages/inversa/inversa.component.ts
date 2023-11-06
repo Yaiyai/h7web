@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiSectionsService } from 'src/app/communication/api-sections.service';
 @Component({
   selector: 'app-inversa',
@@ -35,14 +36,19 @@ export class InversaComponent implements OnInit {
 
   constructor(
     public apiSectionsService: ApiSectionsService,
-  ) { }
+    private translate: TranslateService,
+  ) {
+    this.translate.onLangChange.subscribe(res => {
+      this.getData();
+    });
+  }
 
   ngOnInit(): void {
     this.getData();
   }
 
   getData() {
-    this.apiSectionsService.getSection('6533fe444f5e07001aa5bcbc').subscribe({
+    this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '6533fe444f5e07001aa5bcbc' : '65492b37d90d872145f14fed').subscribe({
       next: section => {
         this.inversa = section.section;
         this.result = {

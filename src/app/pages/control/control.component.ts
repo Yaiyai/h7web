@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiSectionsService } from 'src/app/communication/api-sections.service';
 import { ApiVariantsService } from 'src/app/communication/api-variants.service';
 @Component({
@@ -36,14 +37,18 @@ export class ControlComponent implements OnInit {
 
   constructor(
     public apiSectionsService: ApiSectionsService,
-  ) { }
-
+    private translate: TranslateService,
+  ) {
+    this.translate.onLangChange.subscribe(res => {
+      this.getData();
+    });
+  }
   ngOnInit(): void {
     this.getData();
   }
 
   getData() {
-    this.apiSectionsService.getSection('6533fdac4f5e07001aa5bcb7').subscribe({
+    this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '6533fdac4f5e07001aa5bcb7' : '65492b13d90d872145f14fea').subscribe({
       next: section => {
         this.control = section.section;
         this.result = {

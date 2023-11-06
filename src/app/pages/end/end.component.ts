@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiSectionsService } from 'src/app/communication/api-sections.service';
 
 @Component({
@@ -37,14 +38,18 @@ export class EndComponent implements OnInit {
 
   constructor(
     public apiSectionsService: ApiSectionsService,
-  ) { }
-
+    private translate: TranslateService,
+  ) {
+    this.translate.onLangChange.subscribe(res => {
+      this.getData();
+    });
+  }
   ngOnInit(): void {
     this.getData();
   }
 
   getData() {
-    this.apiSectionsService.getSection('6533fe024f5e07001aa5bcba').subscribe({
+    this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '6533fe024f5e07001aa5bcba' : '65492b2bd90d872145f14fec').subscribe({
       next: section => {
         this.end = section.section;
         this.result = {
