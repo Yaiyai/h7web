@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiVariantsService } from 'src/app/communication/api-variants.service';
 
 @Component({
@@ -19,7 +20,12 @@ export class VariantesComponent implements OnInit {
 
   constructor(
     private apiVariantsService: ApiVariantsService,
-  ) { }
+    private translate: TranslateService,
+  ) {
+    this.translate.onLangChange.subscribe(res => {
+      this.getVariantes();
+    });
+  }
 
   ngOnInit() {
     this.getVariantes();
