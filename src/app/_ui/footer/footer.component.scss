@@ -23,8 +23,29 @@ footer {
       }
     }
     .last {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      .logos {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px;
+      }
       @media (min-width: 992px) {
         margin-left: auto;
+      }
+      @media (max-width: 991px) {
+        flex-direction: column;
+      }
+      ul li {
+        margin: 0;
+      }
+      figure {
+        width: 80px;
+        height: 38px;
+        cursor: default;
       }
     }
     figure {

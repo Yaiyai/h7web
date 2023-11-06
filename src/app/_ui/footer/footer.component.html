@@ -12,7 +12,21 @@
                 <app-button [isNegative]="true" [label]="'Ingeniería inversa'" classBtn="link" (click)="navigate('ingenieria-inversa')"></app-button>
                 <app-button [isNegative]="true" [label]="'Impresión 3D'" classBtn="link" (click)="navigate('impresion-3d')"></app-button>
             </div>
-            <app-button class="last" [isNegative]="true" [label]="'Subvenciones'" classBtn="link" (click)="navigate('subvenciones')"></app-button>
+            <div class="last">
+                <app-button [isNegative]="true" [label]="'Subvenciones'" classBtn="link" (click)="navigate('subvenciones')"></app-button>
+                <ul class="logos">
+                    <li>
+                        <figure>
+                            <img src="https://res.cloudinary.com/sanroque/image/upload/v1691425020/Logo_PRTR_dos_li%CC%81neas_BLANCO_hcsvuw.png" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://res.cloudinary.com/sanroque/image/upload/v1691425390/ES-Financiado-por-la-Uni%E0%B8%82n-Europea_WHITE-Outline-1024x284-1_psblin.webp" alt="">
+                        </figure>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="bottom">
