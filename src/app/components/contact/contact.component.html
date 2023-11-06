@@ -1,33 +1,33 @@
-<app-text-image id="contact" [isCustom]="true" [image]="image" [leftImage]="false" [mainTitle]="'Contacta con nosotros'">
+<app-text-image id="contact" [isCustom]="true" [image]="image" [leftImage]="false" [mainTitle]="'contact_us_s'">
     <form #form *ngIf="contactForm" [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
         <div class="input-label double">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" [placeholder]="'Nombre'" formControlName="name" />
+            <label for="name">{{'name' | translating}}</label>
+            <input type="text" id="name" [placeholder]="'name' | translating" formControlName="name" />
         </div>
         <div class="input-label double">
-            <label for="surname">Apellidos</label>
-            <input type="text" id="surname" [placeholder]="'Apellidos'" formControlName="surname" />
+            <label for="surname">{{'surnames' | translating}}</label>
+            <input type="text" id="surname" [placeholder]="'surnames' | translating" formControlName="surname" />
         </div>
         <div class="input-label double">
-            <label for="email">Email</label>
-            <input type="email" id="email" [placeholder]="'Email'" formControlName="email" />
+            <label for="email">{{'email' | translating}}</label>
+            <input type="email" id="email" [placeholder]="'email' | translating" formControlName="email" />
         </div>
         <div class="input-label double">
-            <label for="phone">Teléfono</label>
-            <input type="number" id="phone" [placeholder]="'Teléfono'" formControlName="phone" />
+            <label for="phone">{{'phone' | translating}}</label>
+            <input type="number" id="phone" [placeholder]="'phone' | translating" formControlName="phone" />
         </div>
         <div class="input-label">
-            <label for="company">Empresa</label>
-            <input type="text" id="company" [placeholder]="'Empresa'" formControlName="company" />
+            <label for="company">{{'company' | translating}}</label>
+            <input type="text" id="company" [placeholder]="'company' | translating" formControlName="company" />
         </div>
         <div class="input-textarea">
-            <label for="message">Mensaje</label>
-            <textarea id="message" [placeholder]="'Mensaje'" formControlName="message"> </textarea>
+            <label for="message">{{'msg' | translating}}</label>
+            <textarea id="message" [placeholder]="'msg' | translating" formControlName="message"> </textarea>
         </div>
         <input type='hidden' formControlName='receptor' />
         <input type='hidden' formControlName='link' />
         <input type='hidden' formControlName='web' />
         <input type='hidden' formControlName='subject' />
-        <app-button type="submit" [label]="'Contactar'" classBtn="main"></app-button>
+        <app-button type="submit" [label]="'contact_us'" classBtn="main"></app-button>
     </form>
 </app-text-image>

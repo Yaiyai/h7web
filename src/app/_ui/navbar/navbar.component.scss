@@ -31,13 +31,21 @@ figure {
   align-items: center;
   gap: 24px;
 }
-app-button {
-  display: block;
-  margin-left: auto;
-}
 
 .container.nav {
   display: flex;
   align-items: center;
   gap: 36px;
+}
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  gap: 2px;
+  app-button {
+    &:last-of-type {
+      margin-left: 12px;
+    }
+  }
 }

@@ -9,7 +9,7 @@
 </app-header>
 
 <app-container id="soluciones" [isContainer]="true">
-    <h3 class="main">Quiénes somos</h3>
+    <h3 class="main">{{'who' | translating}}</h3>
     <div class="features">
         <article *ngFor="let feat of features" class="box" [innerHTML]=" feat | safe:'html' "></article>
     </div>
@@ -19,10 +19,10 @@
     <div class="container">
         <h3>Soluciones</h3>
         <div class="solutions">
-            <app-list-item [mainTitle]="'Control dimensional'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509083/web/control.png" link="control-dimensional"></app-list-item>
+            <app-list-item [mainTitle]="'dimensional'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509083/web/control.png" link="control-dimensional"></app-list-item>
             <app-list-item [mainTitle]="'END'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509082/web/end.png" link="end"></app-list-item>
-            <app-list-item [mainTitle]="'Ingeniería Inversa'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509082/web/inversa.png" link="ingenieria-inversa"></app-list-item>
-            <app-list-item [mainTitle]="'Impresión 3D'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509083/web/impresion.png" link="impresion-3d"></app-list-item>
+            <app-list-item [mainTitle]="'engineering'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509082/web/inversa.png" link="ingenieria-inversa"></app-list-item>
+            <app-list-item [mainTitle]="'print'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509083/web/impresion.png" link="impresion-3d"></app-list-item>
         </div>
     </div>
 </section>

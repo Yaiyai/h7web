@@ -7,15 +7,17 @@
 
         <div *ngIf="appService.isDesktop" class="links">
             <app-button [label]="'who'" classBtn="link" (click)="navigate('quienes-somos')"></app-button>
-            <app-button [label]="'Soluciones'" classBtn="link" (click)="navigate('/', 'soluciones')"></app-button>
-            <app-button [label]="'Control Dimensional'" classBtn="link" (click)="navigate('control-dimensional')"></app-button>
+            <app-button [label]="'solutions'" classBtn="link" (click)="navigate('/', 'solutions')"></app-button>
+            <app-button [label]="'dimensional'" classBtn="link" (click)="navigate('control-dimensional')"></app-button>
             <app-button [label]="'END'" classBtn="link" (click)="navigate('end')"></app-button>
-            <app-button [label]="'Ingeniería inversa'" classBtn="link" (click)="navigate('ingenieria-inversa')"></app-button>
-            <app-button [label]="'Impresión 3D'" classBtn="link" (click)="navigate('impresion-3d')"></app-button>
+            <app-button [label]="'engineering'" classBtn="link" (click)="navigate('ingenieria-inversa')"></app-button>
+            <app-button [label]="'print'" classBtn="link" (click)="navigate('impresion-3d')"></app-button>
         </div>
 
-        <app-button [label]="'ES'" classBtn="link" (click)="switchLanguage('es')"></app-button>
-        <app-button [label]="'EN'" classBtn="link" (click)="switchLanguage('en')"></app-button>
-        <app-button [label]="'Contactar'" classBtn="main" icon="fa-solid fa-chevron-right" (click)="navigate('/', 'contact')"></app-button>
+        <div class="lang">
+            <app-button [label]="'ES'" classBtn="link" (click)="switchLanguage('es')"></app-button>
+            <app-button [label]="'EN'" classBtn="link" (click)="switchLanguage('en')"></app-button>
+            <app-button [label]="'contact_us'" classBtn="main" icon="fa-solid fa-chevron-right" (click)="navigate('/', 'contact')"></app-button>
+        </div>
     </div>
 </nav>
