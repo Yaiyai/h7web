@@ -30,7 +30,7 @@ export const languagesFalse: any = {
         print: "Print 3D",
         subs: "Subventions",
         desing: "- Design&Development: MFi, S.L.",
-        terms: "Térms&Conditions",
+        terms: "Terms & Conditions",
         conditions: "User conditions",
         privacy: "Privacy policy",
         contact_us_s: "Contact us",
