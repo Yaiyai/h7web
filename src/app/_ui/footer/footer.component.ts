@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from 'src/app/communication/services/app/app.service';
 import { CompanyService } from 'src/app/communication/services/company/company.service';
 
 @Component({
@@ -9,9 +10,13 @@ import { CompanyService } from 'src/app/communication/services/company/company.s
 })
 export class FooterComponent {
   public year = new Date().getFullYear();
+  public get design() {
+    return this.appService.getTranslation('desing');
+  }
   constructor(
     private router: Router,
     public companyService: CompanyService,
+    public appService: AppService
   ) { }
 
   navigate(url: string) {

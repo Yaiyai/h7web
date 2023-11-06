@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AppService } from 'src/app/communication/services/app/app.service';
 
 @Component({
   selector: 'app-text-image',
@@ -12,7 +13,7 @@ export class TextImageComponent {
   @Input() image: any;
   @Input() text: any;
 
-  constructor() { }
+  constructor(public appService: AppService) { }
 
 
 }

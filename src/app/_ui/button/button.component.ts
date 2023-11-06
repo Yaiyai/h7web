@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AppService } from 'src/app/communication/services/app/app.service';
 
 @Component({
   selector: 'app-button',
@@ -10,10 +11,11 @@ export class ButtonComponent {
   @Input() classBtn: 'main' | 'outline' | 'go' | 'link' | 'gray' | 'white' | 'nolink' = 'main';
   @Input() isLink: boolean = false;
   @Input() isNegative: boolean = false;
+  @Input() noTranslate: boolean = false;
   @Input() link: string = '';
   @Input() icon: string = '';
 
-  constructor() { }
+  constructor(public appService: AppService) { }
 
   ngOnInit() {
 

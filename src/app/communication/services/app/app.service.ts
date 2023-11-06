@@ -1,7 +1,9 @@
 import { isPlatformServer } from '@angular/common';
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Subject, Subscription } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
+import { languagesFalse } from 'src/assets/languages';
 type MessageCallback = (payload: any) => void;
 
 @Injectable({
@@ -18,6 +20,7 @@ export class AppService {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
+    private translate: TranslateService,
   ) { }
 
   setIsHome(isHome: boolean) {
@@ -34,6 +37,10 @@ export class AppService {
     if (isPlatformServer(this.platformId)) return false;
     const is = window.matchMedia("(max-width:  991px)");
     return is.matches;
+  }
+
+  public getTranslation(key: string) {
+    return languagesFalse[this.translate.currentLang][key];
   }
 
   broadcast(type: string, payload: any = null) {

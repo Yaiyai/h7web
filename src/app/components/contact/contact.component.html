@@ -1,28 +1,28 @@
 <app-text-image id="contact" [isCustom]="true" [image]="image" [leftImage]="false" [mainTitle]="'contact_us_s'">
     <form #form *ngIf="contactForm" [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
         <div class="input-label double">
-            <label for="name">{{'name' | translating}}</label>
-            <input type="text" id="name" [placeholder]="'name' | translating" formControlName="name" />
+            <label for="name">{{appService.getTranslation('name')}}</label>
+            <input type="text" id="name" [placeholder]="appService.getTranslation('name')" formControlName="name" />
         </div>
         <div class="input-label double">
-            <label for="surname">{{'surnames' | translating}}</label>
-            <input type="text" id="surname" [placeholder]="'surnames' | translating" formControlName="surname" />
+            <label for="surname">{{appService.getTranslation('surnames')}}</label>
+            <input type="text" id="surname" [placeholder]="appService.getTranslation('surnames')" formControlName="surname" />
         </div>
         <div class="input-label double">
-            <label for="email">{{'email' | translating}}</label>
-            <input type="email" id="email" [placeholder]="'email' | translating" formControlName="email" />
+            <label for="email">{{appService.getTranslation('email')}}</label>
+            <input type="email" id="email" [placeholder]="appService.getTranslation('email')" formControlName="email" />
         </div>
         <div class="input-label double">
-            <label for="phone">{{'phone' | translating}}</label>
-            <input type="number" id="phone" [placeholder]="'phone' | translating" formControlName="phone" />
+            <label for="phone">{{appService.getTranslation('phone')}}</label>
+            <input type="number" id="phone" [placeholder]="appService.getTranslation('phone')" formControlName="phone" />
         </div>
         <div class="input-label">
-            <label for="company">{{'company' | translating}}</label>
-            <input type="text" id="company" [placeholder]="'company' | translating" formControlName="company" />
+            <label for="company">{{appService.getTranslation('company')}}</label>
+            <input type="text" id="company" [placeholder]="appService.getTranslation('company')" formControlName="company" />
         </div>
         <div class="input-textarea">
-            <label for="message">{{'msg' | translating}}</label>
-            <textarea id="message" [placeholder]="'msg' | translating" formControlName="message"> </textarea>
+            <label for="message">{{appService.getTranslation('msg')}}</label>
+            <textarea id="message" [placeholder]="appService.getTranslation('msg')" formControlName="message"> </textarea>
         </div>
         <input type='hidden' formControlName='receptor' />
         <input type='hidden' formControlName='link' />

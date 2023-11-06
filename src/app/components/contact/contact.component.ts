@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 import { ApiCompanyService } from 'src/app/communication/api-company.service';
+import { AppService } from 'src/app/communication/services/app/app.service';
 
 @Component({
   selector: 'app-contact',
@@ -21,7 +22,7 @@ export class ContactComponent implements OnInit {
 
   public contactForm!: FormGroup;
 
-  constructor(private apiCompanyService: ApiCompanyService) { }
+  constructor(private apiCompanyService: ApiCompanyService, public appService: AppService,) { }
 
   ngOnInit() {
     this.buildForm();

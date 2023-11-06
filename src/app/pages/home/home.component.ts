@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ApiSectionsService } from 'src/app/communication/api-sections.service';
+import { AppService } from 'src/app/communication/services/app/app.service';
 import { CompanyService } from 'src/app/communication/services/company/company.service';
 @Component({
   selector: 'app-home',
@@ -31,6 +32,7 @@ export class HomeComponent implements OnInit {
     public companyService: CompanyService,
     public apiSectionsService: ApiSectionsService,
     private translate: TranslateService,
+    public appService: AppService,
   ) {
     this.translate.onLangChange.subscribe(res => {
       this.getData();

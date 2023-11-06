@@ -3,7 +3,7 @@
         <img [src]="image" [alt]="'H7metrology - ' + mainTitle">
     </figure>
     <div class="list">
-        <p>{{mainTitle | translating}}</p>
+        <p>{{appService.getTranslation(mainTitle)}}</p>
     </div>
     <div class="arrow">
         <i class="fa-solid fa-chevron-right"></i>

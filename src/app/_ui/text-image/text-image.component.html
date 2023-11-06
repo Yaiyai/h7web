@@ -1,5 +1,5 @@
 <app-container [isContainer]="true">
-    <h3>{{mainTitle | translating}}</h3>
+    <h3>{{appService.getTranslation(mainTitle)}}</h3>
     <article class="text-image" [ngClass]="{'image-left':leftImage, 'image-right':!leftImage}">
         <div class="left">
             <figure *ngIf="image">
