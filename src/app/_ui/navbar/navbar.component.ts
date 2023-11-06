@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { AppService } from 'src/app/communication/services/app/app.service';
 import { CompanyService } from 'src/app/communication/services/company/company.service';
+import { languagesFalse } from 'src/assets/languages';
 
 @Component({
   selector: 'app-navbar',
@@ -19,6 +20,10 @@ export class NavbarComponent {
     public companyService: CompanyService,
     public translate: TranslateService,
     public appService: AppService) {
+  }
+
+  getTranslation(key: string) {
+    return languagesFalse[this.translate.currentLang][key];
   }
 
   ngOnDestroy() {
