@@ -35,7 +35,7 @@ export class ContactComponent implements OnInit {
       phone: new FormControl('', [Validators.required]),
       company: new FormControl(''),
       message: new FormControl('', [Validators.required]),
-      receptor: new FormControl('ydelrio@bratic.es'),
+      receptor: new FormControl('contacto@h7metrology.com'),
       web: new FormControl('H7Metrology'),
       link: new FormControl('https://cms.h7metrology.com/h7/mensajes'),
       subject: new FormControl('Hay un mensaje nuevo en el gestor de contenido de H7Metrology'),

@@ -1,6 +1,6 @@
 <ng-container *ngIf="!isLink">
     <button [ngClass]="{'negative':isNegative}" [class]="classBtn + ' my-button' ">
-        <span>{{label}}</span>
+        <span>{{label | translating}}</span>
         <div *ngIf="icon" class="icon sm">
             <i [class]="icon"></i>
         </div>
@@ -8,7 +8,7 @@
 </ng-container>
 <ng-container *ngIf="isLink">
     <a [ngClass]="{'negative':isNegative}" [class]="classBtn + ' my-button' " [href]="link" target="_blank">
-        <span>{{label}}</span>
+        <span>{{label | translating}}</span>
         <div *ngIf="icon" class="icon sm">
             <i [class]="icon"></i>
         </div>

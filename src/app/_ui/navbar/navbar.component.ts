@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { AppService } from 'src/app/communication/services/app/app.service';
 import { CompanyService } from 'src/app/communication/services/company/company.service';
@@ -13,7 +14,11 @@ export class NavbarComponent {
   private subscription: Subscription = new Subscription();
   public company: any;
 
-  constructor(private router: Router, public companyService: CompanyService, public appService: AppService) {
+  constructor(
+    private router: Router,
+    public companyService: CompanyService,
+    public translate: TranslateService,
+    public appService: AppService) {
   }
 
   ngOnDestroy() {
@@ -22,6 +27,10 @@ export class NavbarComponent {
 
   goHome() {
     this.navigate('/');
+  }
+
+  switchLanguage(lang: 'es' | 'en') {
+    this.translate.use(lang);
   }
 
   navigate(url: string, anchor: string = '') {
