@@ -1,0 +1,10 @@
+# Group 1
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+# Group 2
+User-agent: *
+Allow: /
+
+Sitemap: https://www.h7metrology.com/sitemap.xml
+Sitemap: https://h7metrology.com/sitemap.xml
