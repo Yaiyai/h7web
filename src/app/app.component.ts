@@ -25,6 +25,9 @@ export class AppComponent {
     translate.setDefaultLang('es');
     translate.use('es');
     this.meta.addTags([
+      { name: 'robots', content: 'index, follow' },
+      { name: 'googlebot', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+      { name: 'bingbot', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
       { name: 'description', content: 'H7 Metrology - Dimensional & NDT Solutions - Cantabria, España' },
       { name: 'author', content: 'https://mfi.es/' },
       { name: 'keywords', content: 'H7, Reinosa, Cantabria, España, Ingeniería Inversa, Control dimensional, Ensayos no destructivos, Impresion 3D, Impresora 3D, Metrology, H7 Metrology, Método UT, Metodo MT, Inspecciones S/P, Medicion Laser Tracker' },
