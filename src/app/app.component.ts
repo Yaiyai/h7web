@@ -24,15 +24,15 @@ export class AppComponent {
     translate.addLangs(['es', 'en']);
     translate.setDefaultLang('es');
     translate.use('es');
-    // this.meta.addTags([
-    //   { name: 'description', content: 'Restaurante de comida tradicional y caza en Brañosera, Palencia.' },
-    //   { name: 'author', content: 'https://mfi.es/' },
-    //   { name: 'keywords', content: 'Brañosera, Restaurante, 824, Jandrin, Caza, Menú del dia, Menu, Dia, Banquetes, Montaña palentina, Comer bien, Palencia, Primer Fuero de España, Branosera, Espana, España' },
-    //   { name: 'twitter:card', content: 'summary_large_image' },
-    //   { name: 'twitter:url', content: 'https://www.sanroquebranosera.es/' },
-    //   { name: 'twitter:title', content: 'Restaurante San Roque || Brañosera' },
-    //   { name: 'twitter:description', content: 'Restaurante de comida tradicional y caza' },
-    // ]);
+    this.meta.addTags([
+      { name: 'description', content: 'H7 Metrology - Dimensional & NDT Solutions - Cantabria, España' },
+      { name: 'author', content: 'https://mfi.es/' },
+      { name: 'keywords', content: 'H7, Reinosa, Cantabria, España, Ingeniería Inversa, Control dimensional, Ensayos no destructivos, Impresion 3D, Impresora 3D, Metrology, H7 Metrology, Método UT, Metodo MT, Inspecciones S/P, Medicion Laser Tracker' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:url', content: 'https://www.h7metrology.com/' },
+      { name: 'twitter:title', content: 'H7 Metrology - Dimensional & NDT Solutions' },
+      { name: 'twitter:description', content: 'H7 Metrology es una compañía que provee soluciones donde se requiera tanto el control dimensional como los ensayos no destructivos, tanto para componentes nuevos como maquinaria en servicio.' },
+    ]);
   }
 
   ngOnInit() {
