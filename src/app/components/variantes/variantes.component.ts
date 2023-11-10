@@ -9,6 +9,7 @@ import { ApiVariantsService } from 'src/app/communication/api-variants.service';
 })
 export class VariantesComponent implements OnInit {
   @Input() category!: string;
+  @Input() items: number = 3;
   private _variantes: any;
   public get hasVariants() {
     return this._variantes?.length > 0;

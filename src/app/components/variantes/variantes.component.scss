@@ -5,14 +5,27 @@
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-  }
-  app-variante {
-    display: block;
-    flex: 0 0 49%;
-    margin-bottom: 24px;
-    @media (max-width: 991px) {
-      flex: 0 0 100%;
-      margin-bottom: 0;
+    app-variante {
+      display: block;
+      @media (min-width: 992px) {
+        height: 100%;
+        max-width: calc(
+          (100% / var(--items)) - (24px * (var(--items) - 1) / var(--items))
+        );
+        min-width: calc(
+          (100% / var(--items)) - (24px * (var(--items) - 1) / var(--items))
+        );
+      }
+      @media (min-width: 675px) and (max-width: 991px) {
+        height: 100%;
+        max-width: calc((100% / 2) - (24px * (2 - 1) / 2));
+        min-width: calc((100% / 2) - (24px * (2 - 1) / 2));
+      }
+      @media (max-width: 674px) {
+        max-width: 100%;
+        min-width: 100%;
+        margin-bottom: 0;
+      }
     }
   }
 }
