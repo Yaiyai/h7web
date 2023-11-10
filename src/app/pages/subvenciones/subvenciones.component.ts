@@ -9,6 +9,7 @@ import { ApiSectionsService } from 'src/app/communication/api-sections.service';
 })
 export class SubvencionesComponent implements OnInit {
   public sub: any;
+  public sub2: any;
   public get bkg() {
     return this.sub?.uniqueImage;
   }
@@ -18,14 +19,19 @@ export class SubvencionesComponent implements OnInit {
   }
 
   public get text() {
-    return this.sub?.text1 || '';
+    return this.sub?.text || '';
   }
   public get text2() {
-    return this.sub?.text2 || '';
+    return this.sub2?.text || '';
   }
   public get images() {
     return this.sub?.gallery || [];
   }
+
+  public get images2() {
+    return this.sub2?.gallery || [];
+  }
+
   public get subimages() {
     return this.sub?.sub || [];
   }
@@ -48,12 +54,19 @@ export class SubvencionesComponent implements OnInit {
       next: section => {
         this.sub = section.section;
         let aux = section.section.gallery.filter((elm: any) => elm);
-        this.sub.text1 = section.section.text.split('((()))')[0];
-        this.sub.text2 = section.section.text.split('((()))')[1];
         this.sub.gallery = [...aux].slice(0, -3);
         this.sub.sub = [...aux].slice(1).slice(-3);
-        console.log(this.sub);
+        this.getData2();
       }
     });
+  }
+
+  getData2() {
+    this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '654e0b04bdcbb100194f8ff3' : '654e0b04bdcbb100194f8ff3').subscribe({
+      next: section => {
+        this.sub2 = section.section;
+      }
+    });
+
   }
 }

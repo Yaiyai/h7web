@@ -8,9 +8,14 @@
             <img [src]="image" alt="H7Metrology">
         </figure>
     </div>
-    <div [innerHTML]=" text2 | safe:'html' "></div>
     <div class="images">
         <figure *ngFor="let image of images">
+            <img [src]="image" alt="H7Metrology">
+        </figure>
+    </div>
+    <div [innerHTML]=" text2 | safe:'html' "></div>
+    <div class="images">
+        <figure *ngFor="let image of images2">
             <img [src]="image" alt="H7Metrology">
         </figure>
     </div>
