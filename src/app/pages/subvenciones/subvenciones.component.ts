@@ -46,7 +46,7 @@ export class SubvencionesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.getData();
+    this.getData();
   }
 
   getData() {
