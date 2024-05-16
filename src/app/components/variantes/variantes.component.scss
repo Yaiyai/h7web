@@ -8,7 +8,7 @@
     app-variante {
       display: block;
       @media (min-width: 992px) {
-        height: 100%;
+        height: auto;
         max-width: calc(
           (100% / var(--items)) - (24px * (var(--items) - 1) / var(--items))
         );
@@ -17,7 +17,7 @@
         );
       }
       @media (min-width: 675px) and (max-width: 991px) {
-        height: 100%;
+        height: auto;
         max-width: calc((100% / 2) - (24px * (2 - 1) / 2));
         min-width: calc((100% / 2) - (24px * (2 - 1) / 2));
       }

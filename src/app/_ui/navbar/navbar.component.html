@@ -6,17 +6,17 @@
         </figure>
 
         <div *ngIf="appService.isDesktop" class="links">
-            <app-button [label]="'who'" classBtn="link" (click)="navigate('quienes-somos')"></app-button>
-            <app-button [label]="'solutions'" classBtn="link" (click)="navigate('/', 'soluciones')"></app-button>
-            <app-button [label]="'dimensional'" classBtn="link" (click)="navigate('control-dimensional')"></app-button>
-            <app-button [label]="'END'" classBtn="link" (click)="navigate('end')"></app-button>
-            <app-button [label]="'engineering'" classBtn="link" (click)="navigate('ingenieria-inversa')"></app-button>
-            <app-button [label]="'print'" classBtn="link" (click)="navigate('impresion-3d')"></app-button>
+            <app-button [label]="'who'" classBtn="nav" (click)="navigate('quienes-somos')"></app-button>
+            <app-button [label]="'solutions'" classBtn="nav" (click)="navigate('/', 'soluciones')"></app-button>
+            <app-button [label]="'dimensional'" classBtn="nav" (click)="navigate('control-dimensional')"></app-button>
+            <app-button [label]="'END'" classBtn="nav" (click)="navigate('end')"></app-button>
+            <app-button [label]="'engineering'" classBtn="nav" (click)="navigate('ingenieria-inversa')"></app-button>
+            <app-button [label]="'print'" classBtn="nav" (click)="navigate('impresion-3d')"></app-button>
         </div>
 
         <div class="lang">
-            <app-button [label]="'ES'" classBtn="link" (click)="switchLanguage('es')"></app-button>
-            <app-button [label]="'EN'" classBtn="link" (click)="switchLanguage('en')"></app-button>
+            <app-button [label]="'ES'" classBtn="nav" (click)="switchLanguage('es')"></app-button>
+            <app-button [label]="'EN'" classBtn="nav" (click)="switchLanguage('en')"></app-button>
             <app-button [label]="'contact_us'" classBtn="main" icon="fa-solid fa-chevron-right" (click)="navigate('/', 'contact')"></app-button>
         </div>
     </div>

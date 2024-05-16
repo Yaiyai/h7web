@@ -3,10 +3,10 @@
     <h2>{{subtitle}}</h2>
 </app-header>
 <ng-container *ngIf="!loading">
-    <app-text-image [mainTitle]="'Carrera'" [leftImage]="false" [image]="carreraImage" [text]="carreraText"></app-text-image>
+    <app-text-image [mainTitle]="'Carrera'" [leftImage]="false" [image]="carreraImage" [text]="carreraText" [justified]="true"></app-text-image>
     <app-quote [quote]="featuresOne"></app-quote>
-    <app-text-image [mainTitle]="'Formación'" [leftImage]="true" [image]="formacionImage" [text]="formacionText"></app-text-image>
+    <app-text-image [mainTitle]="'Formación'" [leftImage]="true" [image]="formacionImage" [text]="formacionText" [justified]="true"></app-text-image>
     <app-quote [quote]="featuresSecond"></app-quote>
-    <app-text-image [mainTitle]="'Sostenibilidad'" [leftImage]="false" [image]="sosImage" [text]="sosText"></app-text-image>
+    <app-text-image [mainTitle]="'Sostenibilidad'" [leftImage]="false" [image]="sosImage" [text]="sosText" [justified]="true"></app-text-image>
 </ng-container>
 <app-contact></app-contact>

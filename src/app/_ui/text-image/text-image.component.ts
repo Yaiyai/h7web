@@ -9,6 +9,7 @@ import { AppService } from 'src/app/communication/services/app/app.service';
 export class TextImageComponent {
   @Input() isCustom: boolean = false;
   @Input() leftImage: boolean = false;
+  @Input() justified: boolean = false;
   @Input() mainTitle: any;
   @Input() image: any;
   @Input() text: any;

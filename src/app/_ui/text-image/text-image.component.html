@@ -7,7 +7,7 @@
             </figure>
         </div>
         <div class="right">
-            <div *ngIf="text && !isCustom" [innerHTML]=" text | safe:'html' "></div>
+            <div *ngIf="text && !isCustom" [ngClass]="{'justify':justified}" [innerHTML]=" text | safe:'html' "></div>
             <ng-container *ngIf="isCustom">
                 <ng-content></ng-content>
             </ng-container>

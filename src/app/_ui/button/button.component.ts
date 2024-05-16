@@ -8,7 +8,7 @@ import { AppService } from 'src/app/communication/services/app/app.service';
 })
 export class ButtonComponent {
   @Input() label: string = '';
-  @Input() classBtn: 'main' | 'outline' | 'go' | 'link' | 'gray' | 'white' | 'nolink' = 'main';
+  @Input() classBtn: 'main' | 'outline' | 'go' | 'link' | 'gray' | 'white' | 'nolink' | 'nav' = 'main';
   @Input() isLink: boolean = false;
   @Input() isNegative: boolean = false;
   @Input() noTranslate: boolean = false;

@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/components/shared.module';
 import { ListItemModule } from 'src/app/_ui/list-item/list-item.module';
 import { ContactModule } from 'src/app/components/contact/contact.module';
+import { LogosModule } from 'src/app/components/logos/logos.module';
 
 @NgModule({
     imports: [
@@ -12,6 +13,7 @@ import { ContactModule } from 'src/app/components/contact/contact.module';
         SharedModule,
         ListItemModule,
         ContactModule,
+        LogosModule,
     ],
     declarations: [
         HomeComponent
