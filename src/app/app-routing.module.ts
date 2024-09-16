@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'ingenieria-inversa', loadChildren: () => import('./pages/inversa/inversa.module').then(m => m.InversaModule) },
   { path: 'impresion-3d', loadChildren: () => import('./pages/impresion/impresion.module').then(m => m.ImpresionModule) },
   { path: 'subvenciones', loadChildren: () => import('./pages/subvenciones/subvenciones.module').then(m => m.SubvencionesModule) },
+  { path: 'certificaciones', loadChildren: () => import('./pages/certificaciones/certificaciones.module').then(m => m.CertificacionesModule) },
 ];
 
 const routerOptions: ExtraOptions = {

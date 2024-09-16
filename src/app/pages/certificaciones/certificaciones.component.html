@@ -1,0 +1,11 @@
+<app-header [bkg]="bkg" [needsBlue]="true" [padding]="200" [isTriangle]="false" [isCentered]="true">
+    <h1>{{title}}</h1>
+</app-header>
+<app-container [isContainer]="true">
+    <div [style]="{'font-weight':600}" [innerHTML]=" text | safe:'html' "></div>
+    <div class="images">
+        <figure *ngFor="let image of images">
+            <img [src]="image" alt="H7Metrology">
+        </figure>
+    </div>
+</app-container>

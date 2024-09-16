@@ -10,7 +10,7 @@ export const languagesFalse: any = {
         terms: "Términos y condiciones",
         conditions: "Condiciones de uso",
         privacy: "Privacidad",
-        contact_us_s: "Contacta con nosotros",
+        certs_s: "Contacta con nosotros",
         name: "Nombre",
         surnames: "Apellidos",
         email: "Correo electrónico",
@@ -18,6 +18,7 @@ export const languagesFalse: any = {
         company: "Empresa",
         phone: "Teléfono",
         contact_us: "Contactar",
+        certs: "Política y certificados",
         EN: "EN",
         ES: "ES",
         END: "END"
@@ -41,6 +42,7 @@ export const languagesFalse: any = {
         company: "Company",
         phone: "Phone",
         contact_us: "Contact",
+        certs: "Politics and certificates",
         EN: "EN",
         ES: "ES",
         END: "NDT"
