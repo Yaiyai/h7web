@@ -51,6 +51,7 @@ export class SubvencionesComponent implements OnInit {
   }
 
   getData() {
+    console.error('lang getData', this.translate.currentLang);
     this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '654e03ffbdcbb100194f8f88' : '654e03ffbdcbb100194f8f88').subscribe({
       next: section => {
         this.sub = section.section;
