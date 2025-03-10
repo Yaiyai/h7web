@@ -40,31 +40,29 @@ export class SubvencionesComponent implements OnInit {
     private translate: TranslateService,
     private apiSectionsService: ApiSectionsService,
   ) {
-    this.translate.onLangChange.subscribe(res => {
-      this.getData();
-      console.error('lang changed', this.translate.currentLang);
-    });
+    // this.translate.onLangChange.subscribe(res => {
+    //   this.getData(this.translate.currentLang);
+    // });
   }
 
   ngOnInit(): void {
     this.getData();
   }
 
-  getData() {
-    console.error('lang getData', this.translate.currentLang);
-    this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '654e03ffbdcbb100194f8f88' : '654e03ffbdcbb100194f8f88').subscribe({
+  getData(lang: string = 'es') {
+    this.apiSectionsService.getSection('654e03ffbdcbb100194f8f88').subscribe({
       next: section => {
         this.sub = section.section;
         let aux = section.section.gallery.filter((elm: any) => elm);
         this.sub.gallery = [...aux].slice(0, -3);
         this.sub.sub = [...aux].slice(1).slice(-3);
-        this.getData2();
+        this.getData2(lang);
       }
     });
   }
 
-  getData2() {
-    this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '654e0b04bdcbb100194f8ff3' : '654e0b04bdcbb100194f8ff3').subscribe({
+  getData2(lang: string = 'es') {
+    this.apiSectionsService.getSection('654e0b04bdcbb100194f8ff3').subscribe({
       next: section => {
         this.sub2 = section.section;
       }
