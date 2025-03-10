@@ -21,9 +21,9 @@ export class AppComponent {
     public translate: TranslateService,
     private companyService: CompanyService,
   ) {
-    translate.addLangs(['es', 'en']);
-    translate.setDefaultLang('es');
-    translate.use('es');
+    this.translate.addLangs(['es', 'en']);
+    this.translate.setDefaultLang('es');
+    this.translate.use('es');
     this.meta.addTags([
       { name: 'robots', content: 'index, follow' },
       { name: 'googlebot', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
