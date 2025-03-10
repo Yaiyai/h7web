@@ -49,6 +49,12 @@ export class SubvencionesComponent implements OnInit {
     // this.getData();
   }
 
+  ngAfterViewInit() {
+    if (!this.sub) {
+      this.getData();
+    }
+  }
+
   getData() {
     this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '654e03ffbdcbb100194f8f88' : '654e03ffbdcbb100194f8f88').subscribe({
       next: section => {
@@ -56,8 +62,9 @@ export class SubvencionesComponent implements OnInit {
         let aux = section.section.gallery.filter((elm: any) => elm);
         this.sub.gallery = [...aux].slice(0, -3);
         this.sub.sub = [...aux].slice(1).slice(-3);
-        debugger;
         console.error(1, this.sub);
+        console.error(1, this.subimages);
+        console.error(1, this.images);
         this.getData2();
       }
     });
@@ -67,8 +74,8 @@ export class SubvencionesComponent implements OnInit {
     this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '654e0b04bdcbb100194f8ff3' : '654e0b04bdcbb100194f8ff3').subscribe({
       next: section => {
         this.sub2 = section.section;
-        debugger;
         console.error(2, this.sub2);
+        console.error(1, this.images2);
       }
     });
 
