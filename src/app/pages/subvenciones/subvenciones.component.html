@@ -3,18 +3,18 @@
 </app-header>
 <app-container [isContainer]="true">
     <div [style]="{'font-weight':600}" [innerHTML]=" text | safe:'html' "></div>
-    <div class="subimages">
+    <div *ngIf="subimages?.length" class="subimages">
         <figure *ngFor="let image of subimages">
             <img [src]="image" alt="H7Metrology">
         </figure>
     </div>
-    <div class="images">
+    <div *ngIf="images?.length" class="images">
         <figure *ngFor="let image of images">
             <img [src]="image" alt="H7Metrology">
         </figure>
     </div>
     <div [innerHTML]=" text2 | safe:'html' "></div>
-    <div class="images">
+    <div *ngIf="images2?.length" class="images">
         <figure *ngFor="let image of images2">
             <img [src]="image" alt="H7Metrology">
         </figure>

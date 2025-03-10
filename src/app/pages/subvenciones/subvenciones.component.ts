@@ -25,15 +25,15 @@ export class SubvencionesComponent implements OnInit {
     return this.sub2?.text || '';
   }
   public get images() {
-    return this.sub?.gallery || [];
+    return this.sub?.gallery;
   }
 
   public get images2() {
-    return this.sub2?.gallery || [];
+    return this.sub2?.gallery;
   }
 
   public get subimages() {
-    return this.sub?.sub || [];
+    return this.sub?.sub;
   }
 
   constructor(
@@ -56,6 +56,7 @@ export class SubvencionesComponent implements OnInit {
         let aux = section.section.gallery.filter((elm: any) => elm);
         this.sub.gallery = [...aux].slice(0, -3);
         this.sub.sub = [...aux].slice(1).slice(-3);
+        console.error(this.sub);
         this.getData2();
       }
     });
@@ -65,6 +66,7 @@ export class SubvencionesComponent implements OnInit {
     this.apiSectionsService.getSection(this.translate.currentLang === 'es' ? '654e0b04bdcbb100194f8ff3' : '654e0b04bdcbb100194f8ff3').subscribe({
       next: section => {
         this.sub2 = section.section;
+        console.error(this.sub2);
       }
     });
 

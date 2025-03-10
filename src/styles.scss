@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;300;400;600;800&display=swap");
 :root {
-  --main: #242e7e;
-  --secondary: #e2e216;
-  --third: #348ca4;
-  --text: #414141;
-  --light-grey: #c1c1c1e6;
-  --grey: #c1c1c1;
+	--primary: #1d612c,
+	--secondary: #efaf94,
+	--dark-primary: #003602,
+	--light-primary: #4d8f56,
+	--grey: #e4e8eb,
+	--light-grey: #fafafa,
+	--dark-grey: darken(#e4e8eb, 20%),
+	--text: #666665,
 }
 * {
   padding: 0;
